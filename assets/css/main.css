@@ -1,0 +1,48 @@
+body {
+    background-color: #1A1B26;
+}
+
+svg {
+    margin-top: 0.2rem;
+    width: 2rem;
+    height: auto;
+    margin-right: 0.6rem;
+}
+
+.container {
+    display: flex;
+    margin: 2rem;
+}
+
+.wrapper {
+    display: grid;
+}
+
+.typing-demo {
+    width: 8ch;
+    animation: typing 1.25s steps(8);
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.7rem solid;
+    color: #9CCB69;
+    font-family: monospace;
+    font-size: 1.5rem;
+}
+
+.typing-demo::after {
+    content: '';
+    position: absolute;
+    animation: typing 1.25s steps(8) blink .5s step-end infinite alternate;
+}
+
+@keyframes typing {
+    from {
+    width: 0;
+    }
+}
+    
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
